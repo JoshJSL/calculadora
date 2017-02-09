@@ -9,6 +9,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
+import javax.swing.JButton;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -36,6 +38,7 @@ public class Calculadora extends JFrame {
 	/** guarda el resultado de la operacion anterior o el número tecleado */
 	double resultado;
 
+        double resultado2;
 	/** para guardar la operacion a realizar */
 	String operacion;
 
