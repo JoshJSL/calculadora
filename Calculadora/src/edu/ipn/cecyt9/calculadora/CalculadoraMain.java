@@ -10,7 +10,7 @@ package edu.ipn.cecyt9.calculadora;
  * - Multiplicar 
  * - Dividir
  * 
- *@author:  emmanuel 
+ *@author:  emmanuel  - Soria, Ugalde(somos dos) 5IM8 
  * @version:  1.0 
  * @date: 06-09-2015 
  */

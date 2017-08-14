@@ -21,7 +21,7 @@ import javax.swing.border.EmptyBorder;
  * 
  * Interfaz para nuestra calculadora basica
  * 
- * @author:  emmanuel 
+ * @author:  emmanuel - Soria, Ugalde(somos dos) 5IM8
  * @version:  1.0 
  * @date: 06-09-2015 
  */
@@ -45,7 +45,7 @@ public class Calculadora extends JFrame {
 	/** Los paneles donde colocaremos los botones */
 	JPanel panelNumeros, panelOperaciones;
 
-	/** Indica si estamos iniciando o no una operación */
+	/** Indica si estamos 8iniciando o no una operación */
 	boolean nuevaOperacion = true;
 
 	/**
