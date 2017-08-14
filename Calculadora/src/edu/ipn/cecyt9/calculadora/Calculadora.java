@@ -53,7 +53,7 @@ public class Calculadora extends JFrame {
 	 */
 	public Calculadora() {
 		super();
-		setSize(250, 300);
+		setSize(310, 300);
 		setTitle("Calculadora Simple");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setResizable(false);
@@ -83,13 +83,19 @@ public class Calculadora extends JFrame {
 		panel.add("Center", panelNumeros);
 
 		panelOperaciones = new JPanel();
-		panelOperaciones.setLayout(new GridLayout(6, 1));
+		panelOperaciones.setLayout(new GridLayout(6, 2));
 		panelOperaciones.setBorder(new EmptyBorder(4, 4, 4, 4));
 
 		nuevoBotonOperacion("+");
 		nuevoBotonOperacion("-");
 		nuevoBotonOperacion("*");
 		nuevoBotonOperacion("/");
+		nuevoBotonOperacion("|x|");
+		nuevoBotonOperacion("√");
+		nuevoBotonOperacion("sin");
+		nuevoBotonOperacion("cos");
+		nuevoBotonOperacion("tan");
+		nuevoBotonOperacion("≈");
 		nuevoBotonOperacion("=");
 		nuevoBotonOperacion("CE");
 
@@ -164,6 +170,9 @@ public class Calculadora extends JFrame {
 	private void operacionPulsado(String tecla) {
 		if (tecla.equals("=")) {
 			calcularResultado();
+		} else if (tecla.equals("≈")) {
+                        resultado=Math.round(new Double(pantalla.getText()));
+			pantalla.setText(""+ resultado);
 		} else if (tecla.equals("CE")) {
 			resultado = 0;
 			pantalla.setText("");
@@ -192,6 +201,22 @@ public class Calculadora extends JFrame {
 			resultado /= new Double(pantalla.getText());
 		} else if (operacion.equals("*")) {
 			resultado *= new Double(pantalla.getText());
+		}else if (operacion.equals("√")){
+                    resultado=Math.sqrt(new Double(pantalla.getText()));
+
+		}else if (operacion.equals("sin")){
+                    resultado=Math.sin((new Double(pantalla.getText()))*Math.PI/180);
+                
+		}else if (operacion.equals("cos")){
+                    resultado=Math.cos((new Double(pantalla.getText()))*Math.PI/180);
+                
+		}else if (operacion.equals("tan")){
+                    
+                    resultado=Math.tan((new Double(pantalla.getText()))*Math.PI/180);
+                
+		}else if (operacion.equals("|x|")){
+                    resultado=Math.abs(new Double(pantalla.getText()));
+                
 		}
 
 		pantalla.setText("" + resultado);
